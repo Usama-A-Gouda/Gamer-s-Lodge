@@ -1,0 +1,84 @@
+body {
+        font-family: 'Poppins', sans-serif;
+        background-image: url(https://i.redd.it/ab94i3q4agk21.jpg);
+        background-color: cover;
+    
+    }
+
+.container {
+    display: flex;
+    justify-content: center;
+    text-align: center; 
+
+
+    
+}    
+.game-area__header {
+    display: flex;
+    justify-content: center; 
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 100px;
+    text-transform: uppercase;
+
+    
+
+}
+.game-area__image {
+    width: 50%;
+}
+.game-area__name {
+    width: 100%;
+    margin-top: -20px;
+}
+.game-area__form {
+    display: flex;
+    flex-direction: column; 
+    
+ 
+}
+.game-area__form > * {
+    display: block;
+    margin: 10px;
+    padding: 10px;
+
+}
+.game-area__form > input:focus , button:focus  {
+   outline: none;
+
+}
+
+.game-area__form > input {
+    text-align: center;
+    border: none;
+
+    }
+
+/*.search {
+    width: 70%;
+
+}
+
+.main {
+    
+    box-shadow: 2px ;
+    text-align: center;
+    margin-top:90px;
+    justify-content: center;
+    padding:10px;
+}
+
+.head {
+    display:inline ;
+}
+#im {
+    display: inline;
+
+}
+.center__form {
+    
+    text-align: center;
+    margin:auto;
+    
+}*/

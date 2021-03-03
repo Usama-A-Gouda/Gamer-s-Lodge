@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- using semantic ui -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.3/dist/semantic.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.3/dist/semantic.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&display=swap" rel="stylesheet"> -->
+
+  <!-- <link rel="stylesheet" href="/css/fortnite/stats.css"> -->
+  <!-- <link rel="stylesheet" href="css/style.css" type="text/css" > -->
+  <link rel="stylesheet" href="../../../css/style.css" type="text/css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/icon.min.css">
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Teko:wght@500&display=swap" rel="stylesheet">
+
+
+
+  <title>Player infromation </title>
+</head>
+
+<body class="div2">
+  <form action="/division2/search/stats" method="POST" class="game-area__form game-area__form--div2 search-again search-again--div2 " autocomplete="off">
+
+    <input type="text" placeholder="Search Now .... " name="playerName">
+
+    <div class="form__group">
+      <div class="form__radio-group" style="color:white;">
+          <input type="radio" class="form__radio-input" name="platform" value="uplay" id="uplay" checked>
+          <label for="uplay" class="form__radio-label"> <i class="bullseye   large icon"></i>Uplay </label>
+          <input type="radio" class="form__radio-input" name="platform" value="xbox" id="xbox">
+          <label for="xbox" class="form__radio-label"><i class="xbox large icon"></i> Xbox</label>
+          <input type="radio" class="form__radio-input" name="platform" value="psn" id="ps4">
+          <label for="ps4" class="form__radio-label"><i class="playstation  large icon"></i>PS4</label>
+ 
+      </div>
+  </div>
+
+</form> 
+
+
+  <div class="stats-container">
+    <div class="player__info">
+      <img src='<%= playerAvatar%>' alt="player avatar"
+        class="player__avatar">
+      <div class="player__about">
+        <h2 class="player__name"><%= playerInfo.platformUserHandle %></h2>
+        <hr>
+        <h4 class="player__platform"><%= playerInfo.platformSlug %></h4>
+        <hr>
+        <h3 class="player__lvl">lvl | <%= playerData.highestPlayerLevel.value %></h3>
+        <hr>
+        <h3 class="player__gear-score">Score | <%= playerData.latestGearScore.displayValue %></h3>
+
+      </div>
+    </div>
+
+    <div class="weapon-kills">
+      <h3 class="weapon-kills__heading"> Kills By <hr> </h3>
+      <div class="weapon-kills__group-state">
+        <div class="weapon-kills-label"><%= playerData.killsBleeding.displayName %></div>
+        <div class="weapon-kills-value"><%= playerData.killsBleeding.displayValue %> <hr></div>
+      </div>
+      <div class="weapon-kills__group-state">
+        <div class="weapon-kills-label"><%= playerData.killsBurning.displayName %></div>
+        <div class="weapon-kills-value"><%= playerData.killsBurning.displayValue %> <hr></div>
+      </div>
+      <div class="weapon-kills__group-state">
+        <div class="weapon-kills-label"><%= playerData.killsShocked.displayName %></div>
+        <div class="weapon-kills-value"><%= playerData.killsShocked.displayValue%> <hr></div>
+      </div>
+      <div class="weapon-kills__group-state">
+        <div class="weapon-kills-label"><%= playerData.killsEnsnare.displayName %></div>
+        <div class="weapon-kills-value"><%= playerData.killsEnsnare.displayValue %> <hr></div>
+      </div>
+      <div class="weapon-kills__group-state">
+        <div class="weapon-kills-label"><%= playerData.killsHeadshot.displayName %></div>
+        <div class="weapon-kills-value"><%= playerData.killsHeadshot.displayValue %> <hr></div>
+      </div>
+
+      <div class="weapon-kills__group-state">
+        <div class="weapon-kills-label"><%= playerData.killsWeaponShotgun.displayName %></div>
+        <div class="weapon-kills-value"><%= playerData.killsWeaponShotgun.displayValue %> <hr></div>
+      </div>
+      <div class="weapon-kills__group-state">
+        <div class="weapon-kills-label"><%= playerData.killsWeaponSubMachinegun.displayName %></div>
+        <div class="weapon-kills-value"><%= playerData.killsWeaponSubMachinegun.displayValue %> <hr></div>
+      </div>
+      <div class="weapon-kills__group-state">
+        <div class="weapon-kills-label"><%= playerData.killsWeaponMounted.displayName %></div>
+        <div class="weapon-kills-value"><%= playerData.killsWeaponMounted.displayValue %> <hr></div>
+      </div>
+      <div class="weapon-kills__group-state">
+        <div class="weapon-kills-label"><%= playerData.killsWeaponPistol.displayName %></div>
+        <div class="weapon-kills-value"><%= playerData.killsWeaponPistol.displayValue %> <hr></div>
+      </div>
+      <div class="weapon-kills__group-state">
+        <div class="weapon-kills-label"><%= playerData.killsWeaponRifle.displayName %></div>
+        <div class="weapon-kills-value"><%= playerData.killsWeaponRifle.displayValue %> <hr></div>
+      </div>
+      <div class="weapon-kills__group-state">
+        <div class="weapon-kills-label"><%= playerData.killsWeaponGrenade.displayName %></div>
+        <div class="weapon-kills-value"><%= playerData.killsWeaponGrenade.displayValue %> <hr></div>
+      </div>
+
+
+
+
+    </div>
+    <div class="dark-zone__info">
+      <h2 class="dark-zone__heading">Dark Zone
+        <hr>
+      </h2>
+
+      <div class="dark-zone__group-state">
+        <div class="dz-label"><%= playerData.xPDZ.displayName %> </div>
+        <div class="dz-value"><%= playerData.xPDZ.displayValue %> </div>
+      </div>
+      <div class="dark-zone__group-state">
+        <div class="dz-label"><%= playerData.timePlayedDarkZone.displayName %> </div>
+        <div class="dz-value"><%= playerData.timePlayedDarkZone.displayValue %> </div>
+      </div>
+      <div class="dark-zone__group-state">
+        <div class="dz-label"><%= playerData.roguesKilled.displayName %> </div>
+        <div class="dz-value"><%= playerData.roguesKilled.displayValue %> </div>
+      </div>
+      <div class="dark-zone__group-state">
+        <div class="dz-label"><%= playerData.killsFactionDzBlackbloc.displayName %> </div>
+        <div class="dz-value"><%= playerData.killsFactionDzBlackbloc.displayValue %> </div>
+      </div>
+      <div class="dark-zone__group-state">
+        <div class="dz-label"><%= playerData.killsFactionDzCultists.displayName %> </div>
+        <div class="dz-value"><%= playerData.killsFactionDzCultists.displayValue %> </div>
+
+      </div>
+
+      <div class="dark-zone__group-state">
+        <div class="dz-label"><%= playerData.killsFactionDzMilitia.displayName %> </div>
+        <div class="dz-value"><%= playerData.killsFactionDzMilitia.displayValue %> </div>
+      </div>
+      <div class="dark-zone__group-state">
+        <div class="dz-label"><%= playerData.killsFactionDzEndgame.displayName %> </div>
+        <div class="dz-value"><%= playerData.killsFactionDzEndgame.displayValue %> </div>
+      </div>
+      <div class="dark-zone__group-state">
+        <div class="dz-label"><%= playerData.killsRoleDzElite.displayName %> </div>
+        <div class="dz-value"><%= playerData.killsRoleDzElite.displayValue %> </div>
+      </div>
+      <div class="dark-zone__group-state">
+        <div class="dz-label"><%= playerData.killsRoleDzNamed.displayName %> </div>
+        <div class="dz-value"><%= playerData.killsRoleDzNamed.displayValue %> </div>
+      </div>
+
+
+    </div>
+
+
+    <div class="general-stats">
+      <h3 class="general-stats__heading"> General stats <hr> </h3>
+      <div class="general-stats__group-state">
+        <div class="general-stats-label">Loot / min</div>
+        <div class="general-stats-value"> <%= playerData.itemsLootedPerMin.displayValue %><hr></div>
+      </div>
+      <div class="general-stats__group-state">
+        <div class="general-stats-label"><%= playerData.killsPvPPerMin.displayName %></div>
+        <div class="general-stats-value"> <%= playerData.killsPvPPerMin.displayValue %><hr></div>
+      </div>
+
+      <div class="general-stats__group-state">
+        <div class="general-stats-label"><%= playerData.killsNpcPerMin.displayName %></div>
+        <div class="general-stats-value"> <%= playerData.killsNpcPerMin.displayValue %><hr></div>
+      </div>
+
+      <div class="general-stats__group-state">
+        <div class="general-stats-label"><%= playerData.playersKilled.displayName %></div>
+        <div class="general-stats-value"> <%= playerData.playersKilled.displayValue %><hr></div>
+      </div>
+      <div class="general-stats__group-state">
+        <div class="general-stats-label"><%= playerData.killsSkillPerMin.displayName %></div>
+        <div class="general-stats-value"> <%= playerData.killsSkillPerMin.displayValue %><hr></div>
+      </div>
+      <div class="general-stats__group-state">
+        <div class="general-stats-label"><%= playerData.killsPvP.displayName %></div>
+        <div class="general-stats-value"> <%= playerData.killsPvP.displayValue %><hr></div>
+
+      </div>
+      <div class="general-stats__group-state">
+        <div class="general-stats-label"><%= playerData.killsNpc.displayName %></div>
+        <div class="general-stats-value"> <%= playerData.killsNpc.displayValue %><hr></div>
+
+      </div>
+      <div class="general-stats__group-state">
+        <div class="general-stats-label"><%= playerData.killsSkill.displayName %></div>
+        <div class="general-stats-value"> <%= playerData.killsSkill.displayValue %><hr></div>
+
+      </div>
+      <div class="general-stats__group-state">
+        <div class="general-stats-label"><%= playerData.headshots.displayName %></div>
+        <div class="general-stats-value"> <%= playerData.headshots.displayValue %><hr></div>
+
+      </div>
+     
+      <div class="general-stats__group-state">
+        <div class="general-stats-label"><%= playerData.commendationCount.displayName %></div>
+        <div class="general-stats-value"> <%= playerData.commendationCount.displayValue %><hr></div>
+
+      </div>
+      <div class="general-stats__group-state">
+        <div class="general-stats-label"><%= playerData.latestGearScore.displayName %></div>
+        <div class="general-stats-value"> <%= playerData.latestGearScore.displayValue %><hr></div>
+
+      </div>
+      <div class="general-stats__group-state">
+        <div class="general-stats-label"><%= playerData.killsSpecializationSurvivalist.displayName %></div>
+        <div class="general-stats-value"> <%= playerData.killsSpecializationSurvivalist.displayValue %><hr></div>
+
+      </div>
+
+
+
+
+
+    </div>
+  </div>
+
+
+
+
+</body>
+
+</html>

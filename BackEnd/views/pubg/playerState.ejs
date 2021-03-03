@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player State</title>
+
+    <!-- using semantic ui -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/statistic.min.css" integrity="sha512-7IFX/ZtMoeSQGjq0O3+9Ku9p3FgOZhHHf1NpbCO9O3hOlNxEb3Wjj8CoqHoDqq/X2pvGryE7aGVvI9+pb2cg7g==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../../../css/style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body class="pubg">
+    <form action="/pubg/search/stats" method="POST" class="game-area__form game-area__form--pubg search-again search-again--div2" autocomplete="off">
+
+        <input type="text" placeholder="Search Now .... " name="playerName">
+        <div class="form__group form__group--pubg ">
+            <div class="form__radio-group">
+                <input type="radio" class="form__radio-input" name="platform" value="pc" id="pc" checked>
+                <label for="pc" class="form__radio-label"> <i class="laptop   large icon"></i>PC </label>
+                <input type="radio" class="form__radio-input" name="platform" value="xbox" id="xbox">
+                <label for="xbox" class="form__radio-label"><i class="xbox large icon"></i> Xbox</label>
+                <input type="radio" class="form__radio-input" name="platform" value="psn" id="ps4">
+                <label for="ps4" class="form__radio-label"><i class="playstation  large icon"></i>PS4</label>
+
+            </div>
+        </div>
+
+
+
+
+</form> 
+
+    <div class="game-states">
+        <!-- header of page -->
+        <div class="game-states__header">
+            <div class="header__player-name">Player Name : <%= playerName %> </div>
+            <div class="header__platform">Platform : <%= playerPlatform %></div> 
+            <hr>
+        </div>
+    </div>
+    <div class="states-heading states-name">First Person Perspective "FPP" States</div>
+    <div class="player-states">
+       
+    <!-- solo fpp -->
+
+        <div class="mode-states">
+            <div class="card-info" >
+                <div class="mode-name">
+                  SOLO
+                </div>
+                <div class="matches-played">
+                    FPP
+                  </div>
+            </div>
+            <div class="card-body">
+                <div class="ui inverted statistics">
+                
+                    <% for (i=0 ; i <= 34 ; i++) {%>  
+                    
+                        <div class="statistic">
+                            <div class="value">
+                                <%= Object.values(playerData["solo-fpp"])[i] %> 
+                            </div>
+                            <div class="label">
+                                <%= Object.keys(playerData["solo-fpp"])[i] %> 
+                            </div>
+                            <hr>
+                            
+                        </div>
+                      
+                
+                
+                    <% } %>
+                    
+                </div>
+             
+            </div>
+        
+        </div>
+    <!-- duo fpp -->
+
+    <div class="mode-states">
+        <div class="card-info card-info--duo" >
+            <div class="mode-name">
+              DUO
+            </div>
+            <div class="matches-played">
+                FPP
+              </div>
+        </div>
+        <div class="card-body">
+            <div class="ui inverted statistics">
+            
+                <% for (i=0 ; i <= 34 ; i++) {%>  
+                
+                    <div class="statistic">
+                        <div class="value">
+                            <%= Object.values(playerData["duo-fpp"])[i] %> 
+                        </div>
+                        <div class="label">
+                            <%= Object.keys(playerData["duo-fpp"])[i] %> 
+                        </div>
+                        <hr>
+                        
+                    </div>
+            
+            
+                <% } %>
+            </div>
+         
+        </div>
+    
+    </div>
+
+        <!-- squad fpp -->
+
+        <div class="mode-states">
+            <div class="card-info card-info--squad" >
+                <div class="mode-name">
+                  SQUAD
+                </div>
+                <div class="matches-played">
+                    FPP
+                  </div>
+            </div>
+            <div class="card-body">
+                <div class="ui inverted statistics">
+                
+                    <% for (i=0 ; i <= 34 ; i++) {%>  
+                    
+                        <div class="statistic">
+                            <div class="value">
+                                <%= Object.values(playerData["squad-fpp"])[i] %> 
+                            </div>
+                            <div class="label">
+                                <%= Object.keys(playerData["squad-fpp"])[i] %> 
+                            </div>
+                            <hr>
+                            
+                        </div>
+                
+                
+                    <% } %>
+                </div>
+                <br>
+                <br>
+                
+            </div>
+        
+        </div>
+
+
+    
+    </div>
+    <!-- end of fpp -->
+    <hr>
+    <br>
+    <!-- tpp -->
+    <div class="states-heading states-name">Third Person Perspective "TPP" States</div>
+    <div class="player-states">
+       
+        <!-- solo tpp -->
+    
+            <div class="mode-states">
+                <div class="card-info" >
+                    <div class="mode-name">
+                      SOLO
+                    </div>
+                    <div class="matches-played">
+                        TPP
+                      </div>
+                </div>
+                <div class="card-body">
+                    <div class="ui inverted statistics">
+                    
+                        <% for (i=0 ; i <= 34 ; i++) {%>  
+                        
+                            <div class="statistic">
+                                <div class="value">
+                                    <%= Object.values(playerData.solo)[i] %> 
+                                </div>
+                                <div class="label">
+                                    <%= Object.keys(playerData.solo)[i] %> 
+                                </div>
+                                <hr>
+                                
+                            </div>
+                          
+                    
+                    
+                        <% } %>
+                        
+                    </div>
+                 
+                </div>
+            
+            </div>
+        <!-- duo tpp -->
+    
+        <div class="mode-states">
+            <div class="card-info card-info--duo" >
+                <div class="mode-name">
+                  DUO
+                </div>
+                <div class="matches-played">
+                    TPP
+                  </div>
+            </div>
+            <div class="card-body">
+                <div class="ui inverted statistics">
+                
+                    <% for (i=0 ; i <= 34 ; i++) {%>  
+                    
+                        <div class="statistic">
+                            <div class="value">
+                                <%= Object.values(playerData.duo)[i]%> 
+                            </div>
+                            <div class="label">
+                                <%= Object.keys(playerData.duo)[i]%> 
+                            </div>
+                            <hr>
+                            
+                        </div>
+                
+                
+                    <% } %>
+                </div>
+             
+            </div>
+        
+        </div>
+    
+            <!-- squad tpp -->
+    
+            <div class="mode-states">
+                <div class="card-info card-info--squad" >
+                    <div class="mode-name">
+                      SQUAD
+                    </div>
+                    <div class="matches-played">
+                        TPP
+                      </div>
+                </div>
+                <div class="card-body">
+
+                    <div class="ui inverted statistics">
+                    
+                        <% for (i=0 ; i <= 34 ; i++) {%>  
+                        
+                            <div class="statistic">
+                                <div class="value">
+                                    <%= Object.values(playerData.squad)[i] %> 
+                                </div>
+                                <div class="label">
+                                    <%= Object.keys(playerData.squad)[i] %> 
+                                </div>
+                                <hr>
+                                
+                            </div>
+                    
+                    
+                        <% } %>
+                    </div>
+                    <br>
+                    <br>
+                    
+                </div>
+            
+            </div>
+    
+    
+        
+        </div>
+    
+
+    
+           
+               
+    
+
+
+</body>
+
+</html>
+
+<!-- 
+
+
+      <div class="ui container main piled ">
+        <div class="general">
+
+            <h2 class="ui center aligned icon header">
+
+                <img class="ui image"
+                    src="https://i.pinimg.com/originals/f0/62/a3/f062a3f214b208dd4eac506542f91422.png">
+                Player Name : <%= playerName %>
+                <!-- <div class="sub header">Platform : <span><%= playerData.platformName %> </span></div> 
+            </h2>
+
+
+        </div>
+        <hr>
+        <div class="ui container">
+            <div class="ui two column grid red">
+                <div class="column">
+                    <div class="ui  fluid card">
+
+                        <div class="content">
+
+                            <p class="header">SOLO <span class="score"></span></p>
+
+                            <hr>
+                            <div class="ui small statistics">
+                                <div class="statistic">
+                                    <div class="value">
+                                        <%= playerData.solo.weeklyKills %>
+                                    </div>
+                                    <div class="label">
+                                        <span>Weekly Kills </span>
+                                    </div>
+                                </div>
+                                <div class="statistic">
+                                    <div class="value">
+                                        <%= playerData.solo.kills %>
+                                    </div>
+                                    <div class="label">
+                                        <span>Kills</span>
+                                    </div>
+                                </div>
+                                <div class="statistic">
+                                    <div class="value">
+                                        <%= playerData.solo.dailyKills %>
+                                    </div>
+                                    <div class="label">
+                                        <span>Daily Kills</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <hr>
+                            <div class="ui small statistics">
+                                <div class="statistic">
+                                    <div class="value">
+                                        <%= playerData.solo.weeklyWins %>
+                                    </div>
+                                    <div class="label">
+                                        <span>Weekly Wins</span>
+                                    </div>
+                                </div>
+                                <div class="statistic">
+                                    <div class="value">
+                                        <%= playerData.solo.wins %>
+                                    </div>
+                                    <div class="label">
+                                        <span>wins</span>
+                                    </div>
+                                </div>
+                                <div class="statistic">
+                                    <div class="value">
+                                        <%= playerData.solo.dailyWins %>
+                                    </div>
+                                    <div class="label">
+                                        <span>Daily Wins</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <hr>
+                            <div class="ui small statistics">
+                                <div class="statistic">
+                                    <div class="value">
+                                        <%= playerData.solo.teamKills %>
+                                    </div>
+                                    <div class="label">
+                                        <span>Team Kills</span>
+                                    </div>
+                                </div>
+                                <div class="statistic">
+                                    <div class="value">
+                                        <%= playerData.solo.assists %>
+                                    </div>
+                                    <div class="label">
+                                        <span>Assists</span>
+                                    </div>
+                                </div>
+                                <div class="statistic">
+                                    <div class="value">
+                                        <%= playerData.solo.top10s %>
+                                    </div>
+                                    <div class="label">
+                                        <span>Top10s</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <hr>
+                            <div class="ui small statistics">
+                                <div class="statistic">
+                                    <div class="value">
+                                        <%= Math.round(playerData.solo.swimDistance) %>
+                                    </div>
+                                    <div class="label">
+                                        <span>Swim Distance (meter)</span>
+                                    </div>
+                                </div>
+                                <div class="statistic">
+                                    <div class="value">
+                                        <%= Math.round( playerData.solo.walkDistance) %>
+                                    </div>
+                                    <div class="label">
+                                        <span>Walk Distance (meter)</span>
+                                    </div>
+                                </div>
+                           
+
+                            </div>
+                            <hr>
+                            <div class="ui small statistics">
+                                <div class="statistic">
+                                    <div class="value">
+                                        <%= Math.round( (playerData.solo.longestTimeSurvived)/60) %>
+                                    </div>
+                                    <div class="label">
+                                        <span>Longest Time Survived (min) </span>
+                                    </div>
+                                </div>
+                                <div class="statistic">
+                                    <div class="value">
+                                        <%= Math.round( playerData.solo.longestKill ) %>
+                                    </div>
+                                    <div class="label">
+                                        <span>Longest Kill (m)</span>
+                                    </div>
+                                </div>
+                           
+
+                            </div>
+                            <hr>
+                            <div class="ui small statistics">
+                                <div class="statistic">
+                                    <div class="value">
+                                        <%= Math.round( (playerData.solo.longestKill)) %>
+                                    </div>
+                                    <div class="label">
+                                        <span>Longest Kill (meter) </span>
+                                    </div>
+                                </div>
+                                <div class="statistic">
+                                    <div class="value">
+                                        <%=  playerData.solo.damageDealt  %>
+                                    </div>
+                                    <div class="label">
+                                        <span>damage Dealt</span>
+                                    </div>
+                                </div>
+                           
+
+                            </div>
+                            <hr>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="column">
+                    <div class="ui  fluid card">
+
+                        <div class="content">
+
+                            <p class="header">SOLO-fpp <span class="score"></span></p>
+
+                            <hr>
+                            <div class="ui statistics">
+                                <div class="statistic">
+                                    <div class="value">
+                                        <%= playerData["solo-fpp"].headshotKills %>
+                                    </div>
+                                    <div class="label">
+                                        <span>Headshot Kills</span>
+                                    </div>
+                                </div>
+                                <div class="statistic">
+                                    <div class="value">
+                                        <%= playerData.solo.kills %>
+                                    </div>
+                                    <div class="label">
+                                        <span>Kills</span>
+                                    </div>
+                                </div>
+                                <div class="statistic">
+                                    <div class="value">
+                                        <%= playerData.solo.dailyKills %>
+                                    </div>
+                                    <div class="label">
+                                        <span>Daily Kills</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <hr>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+
+
+        </div>
+ -->

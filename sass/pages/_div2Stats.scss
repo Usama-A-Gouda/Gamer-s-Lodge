@@ -1,0 +1,278 @@
+.div2 {
+    background-image: url(https://store-images.s-microsoft.com/image/apps.38551.14508040419548838.00dfc6f9-f400-4fc3-a7f5-4f9b59e43fc2.10e822c2-37f4-4d79-b0f7-f2db10ac7e01?mode=scale&q=90&h=720&w=1280&background=%23FFFFFF);
+    background-position: center;
+    background-size: cover;
+    font-family: 'Teko', sans-serif;
+    font-size: 3rem;
+    @include respond (tab-land) {
+        font-size: 2.5rem;
+    }
+
+    @include respond (tab-port) {
+        font-size: 2.2rem;
+    }
+    @include respond (phone) {
+        font-size: 2rem;
+    }
+    @include respond (small-phone-v2) {
+
+        font-size: 3.5rem;
+    }
+
+    
+
+    
+}
+.stats-container {
+    display: flex;
+    flex-wrap: wrap;
+    //height: 150rem;
+    margin: 3rem;
+    padding: 3rem;
+    color: $color-white;
+    text-transform: uppercase;
+    border-radius: 10rem;
+    box-shadow: 0 0 1rem $color-black;
+    @include respond (phone) {
+        width: 140%;
+    }
+    @include respond (small-phone-v2) {
+
+        width: 180%;
+    }
+
+
+    .player__info , .dark-zone__info {
+        flex-wrap: nowrap;
+        box-shadow: 0 0 5rem $color-black;
+        border: 1px solid rgba($color-white , 0.5);
+        border-radius: 2rem;
+        transition: all 0.4s;
+        width: 30%;
+        margin: 2rem;
+        text-align: center;
+       
+        display: flex;
+    
+    }
+    .player__info {
+        height: 25rem;
+        padding: 2rem;
+        //transform: translateX(-4rem);
+        
+        //background-color: rgba($color-black,0.5);
+        @include respond(tab-port) {
+              height: 30rem;
+        }
+        @include respond (small-phone-v2) {
+            width: 40%;
+        }
+
+        &:hover {
+            background-color: rgba($color-black,0.4);
+
+        }
+        .player__avatar {
+            align-self: center;
+            width: 15rem;
+            height: 15rem;
+            border: 3px solid $color-white;
+            border-radius: 50%;
+            
+            -webkit-shape-outside: circle(50% at 50% 50%);
+            shape-outside: circle(50% at 50% 50%);
+            transform: translateX(1rem);
+            margin-right: 0rem;
+            transition: all 0.4s;
+            backface-visibility: hidden;
+            &:hover {
+                backface-visibility: hidden;
+
+                transform: scale(1.1);
+            }
+            }
+        .player__about {
+            flex-direction: column;
+            justify-content: space-around;
+            font-size: 2.5rem;
+            margin-left: 3rem;
+            transition: all 0.4s;
+            &:hover {
+                color: $color-red;
+                transform: scale(1.05);
+            }
+            @include respond(tab-port) {
+                font-size: 2rem;
+                margin-left: 1.5rem;
+                margin-top: 4.5rem;
+
+
+            }
+           
+
+     
+            
+        }
+    }
+    .dark-zone__info {
+        width: 30%; 
+        margin-top: -15rem;
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        align-items: flex-start;
+        @include respond (tab-port) {
+            margin-top: -20rem;
+        }
+        @include respond (small-phone-v2) {
+            margin-top: -130rem; 
+            width:40%;
+            
+        }
+
+    
+        &:hover {
+            background-color: rgba($color-black,0.4);
+
+        }
+        .dark-zone__heading {
+            align-self: center;
+            text-shadow: 0 0 2rem  rgba($color-primary,0.9);
+            transition: all 0.5s ; 
+            &:hover {
+                letter-spacing: 3px;
+
+            }
+
+        }
+        .dark-zone__group-state {
+            font-size: 2.5rem !important;
+            padding: 2rem 1rem;
+            width: 100%;
+            display: flex;
+            text-align: center;
+            justify-content: space-around;
+            align-items: center;
+            
+            &:not(:last-child) {
+                border-bottom: 2px solid rgba($color-black , 0.6);
+
+            }
+            .dz-label {
+                text-align: center;
+                width: 40%;
+                border-left: 1rem yellow solid;
+                padding-left: .5rem;
+                transition: all 0.5s;
+                &:hover {
+                    border-left: 1px yellow solid;
+                    background-color:rgba(yellow,0.7);
+                }
+            }
+            .dz-value {
+                width: 25%;
+
+                border-left: 1rem yellowgreen solid;
+                padding-left: .5rem;
+                transition: all 0.4s;
+                &:hover {
+                    border-left: 1px yellowgreen solid;
+                    background-color:rgba(yellowgreen,0.7);
+                  //  border-bottom: 1rem yellow solid;
+                }
+
+            }
+
+            
+        }
+
+    }
+    .weapon-kills , .general-stats{
+        background-image: linear-gradient(104deg , rgba($color-red,0.5) 0% ,rgba($color-red,0.5) 25% , transparent 25%);
+        box-shadow: 0 0 5rem $color-black;
+        border: 1px solid rgba($color-white , 0.5);
+        border-radius: 2rem;
+        transition: all 0.4s;
+        align-self: flex-start;
+        width: 60%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: flex-start;
+        text-align: center;
+        margin: 2rem;
+        @include respond (small-phone-v2) {
+            width: 40%;
+            flex-direction: column;
+            
+        }
+
+        &:hover {
+            background-color: rgba($color-black,0.6);
+        }
+        &__heading {
+            width: 100%;
+            
+            text-shadow: 0 0 2rem  rgba(blue,0.9);
+            transition: all 0.5s;
+            &:hover {
+                letter-spacing: 3px;
+            }
+          
+ 
+        }
+        &__group-state {
+            
+
+            flex-wrap: nowrap;
+            display: flex;
+            width: 20%;
+            justify-content: space-around;
+            flex-direction: column;
+            transition: all 0.5s;
+            margin-bottom: 1.5rem;
+            
+            &:hover {
+               transform: rotate(5deg);
+              
+            }
+            @include respond(tab-port) {
+                width: 30%;
+
+            }
+            @include respond (small-phone-v2) {
+                width: 100%;
+                
+            }
+    
+           
+            
+        }
+        &-label {
+            color: $color-tertiary-dark;
+        }
+        &-value {
+            font-size: 5rem;
+            margin-top: -1.9rem;
+        }
+        
+    }
+    .general-stats {
+        width: 60%;
+        background-image: linear-gradient(104deg , transparent 0% ,transparent 75% , rgba($color-tertiary-dark ,0.5) 75%);
+
+        @include respond (small-phone-v2) {
+            width: 100%;
+            
+        }
+
+        &__heading {
+            text-shadow: 0 0 2rem  rgba($color-red,0.9);
+
+          
+        }
+        &-label {
+            color:red !important;
+        }
+    } 
+}

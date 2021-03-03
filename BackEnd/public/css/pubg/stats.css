@@ -1,0 +1,43 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url(https://i.pinimg.com/originals/53/e5/72/53e572275325808983b5096b67930ba4.jpg) no-repeat center center fixed;
+    background-size: cover;
+    background-repeat: no-repeat;   
+}
+.main {
+    
+    box-shadow: 2px ;
+    text-align: center;
+    margin-top:150px;
+}
+
+hr {
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, rgba(200, 255, 0, 0), rgba(200, 255, 0, 0.75), rgba(200,255, 0, 0));
+ }
+ .ui.header>.image:not(.icon), .ui.header>img{
+     width:100px;
+ }
+
+ .ui.header {
+     color:rgb(235, 192, 0);
+     font-weight: 100px;
+     font-family: 'Poppins', sans-serif;
+    
+
+ }
+
+ /* .ui.card,
+ .ui.cards>.card {
+   background-color:olive;
+   
+ } */
+ .ui.statistics {
+     display: felx;
+     flex-wrap: nowrap;
+     justify-content: space-around;
+ }
+ span {
+    color:rgb(233, 106, 97);
+ }

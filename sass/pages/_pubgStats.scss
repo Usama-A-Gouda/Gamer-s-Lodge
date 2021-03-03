@@ -1,0 +1,35 @@
+.pubg {
+    font-family: 'Oswald', sans-serif ;
+    text-align: center;
+
+    background: linear-gradient(to right bottom ,
+        rgba($color-black,0.4),
+        rgba($color-black,0.4)),
+        url(https://images.wallpapersden.com/image/download/pubg-india_68735_3840x2004.jpg) fixed;
+    background-position: center;
+    background-size: cover ;
+    
+
+    .states-heading {
+        align-items: center;
+        text-align: center; 
+        position: relative;
+        margin: 0 auto; 
+        width: 50%;
+        border-radius: 20%;
+        border-width: 1.5rem;
+        box-shadow: 0px 0px 10px rgba($color-black,1);
+        &:hover {
+            border-radius: 50%;
+            box-shadow: 3px 2px 20px rgba($color-black,1);
+
+        }
+       
+   
+}
+
+}
+.game-states__header {
+    text-transform: uppercase;
+}
+

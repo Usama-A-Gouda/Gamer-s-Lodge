@@ -1,0 +1,394 @@
+.fortnite {
+    font-family: 'Luckiest Guy', cursive ; 
+     background: linear-gradient(to right bottom ,
+      rgba($color-black,0.4),
+       rgba($color-black,0.4)),
+       url(https://www.ps4wallpapers.com/wp-content/uploads/2018/01/PS4Wallpapers.com_5a67ac6a8a416_FORT-1056x594.png) fixed;
+    // background-image: url(https://www.ps4wallpapers.com/wp-content/uploads/2018/01/PS4Wallpapers.com_5a67ac6a8a416_FORT-1056x594.png);
+    background-position: center;
+    background-size: cover ;
+   
+  
+}
+
+.game-states {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white ;
+    
+    text-align: center;
+    @include respond (small-phone-v2) {
+
+     
+        
+
+   }
+
+
+    &__header { 
+
+        margin: 5rem;
+        @include respond(small-phone) {
+            text-align: center;
+            margin-left: 18rem ;
+            
+            }
+        @include respond(small-phone-v2) {
+            margin-left: 30rem;;
+
+        }
+        .header__player-name {
+            text-align: center;
+            font-size: 4rem;
+            @include respond(small-phone-v2) {
+                width: 100vw;
+            }
+            
+
+        }
+        .header__platform{    
+            font-size: 2rem;
+
+        }
+    }
+    .life-time-states {
+        background-color: rgba($color-black,0.5);
+        width: 60%;
+        border-radius: 4rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 1rem;
+        padding-bottom: 2rem;
+        transition: border-radius 0.2s ;
+        @include respond (phone) {
+           
+            width: 100%;
+            
+        }
+        @include respond (small-phone) {
+
+          
+            margin-left: 15rem;;
+            
+   
+       }
+       @include respond (small-phone-v2) {
+
+          
+        width: 135%;
+        
+        margin-left: 30rem;
+        
+        
+
+        
+
+   }
+
+   
+
+
+        &:hover {
+            color: gray;
+            border-radius: 6rem;
+            
+
+        }
+
+
+        }
+    }
+
+
+hr {
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+ }
+ .states-name {
+     font-size: 3rem;
+     text-align: center;
+     
+    
+     border-bottom: yellowgreen 1px solid;
+     transition: all 0.4s;
+     backface-visibility: hidden;
+     &:hover {
+         color: red;
+         transform: scale(1.1); 
+         border-radius:2rem ;
+
+
+     }
+ }
+ .label {
+     color: yellowgreen !important;
+     font-size: 1.3rem !important;
+ }
+ .statistic {
+     transition: all 0.4s;
+     &:hover {
+         transform: translateY(-.5rem);    
+     }
+ }
+
+ .player-states {
+     margin-top: 5rem;
+     font-family: 'Luckiest Guy', cursive;
+     display: flex;
+     justify-content: space-around; 
+     color: white;
+     @include respond (small-phone) {
+
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         margin-left: 15rem;;
+         
+
+    }
+
+     &  > * {
+        border-radius: 3rem;
+         box-shadow: 10px 10px 15px rgba($color-black,0.5);
+         @include respond (small-phone) {
+            width: 100%;
+   
+       }
+   
+   
+     }
+     .mode-states {
+         
+         margin-bottom: 5rem;
+         width: 30%;
+         transition: all 0.1s;
+         backface-visibility: hidden;
+         @include respond (small-phone) {
+            width: 90%;
+   
+       }
+
+         &:hover .card-info > .mode-name {
+                left: 2rem;
+                transition: all 0.2s;
+                @include respond(phone) {
+                    left: 1rem;
+                }
+        }
+
+        &:hover .card-info > .matches-played {
+            right: 2rem;
+            transition: all 0.2s;
+            @include respond(phone) {
+                right: 1rem;
+            }
+
+         }
+         &:hover .card-info {
+            background-image: linear-gradient(105deg, 
+            rgba($color-black, .8) 0%,
+            rgba($color-black, .8) 40%,
+            
+            rgba(blue,0.6) 50%) ; 
+
+         }
+         &:hover .card-info--duo {
+            background-image: linear-gradient(105deg, 
+            rgba($color-black, .8) 0%,
+            rgba($color-black, .8) 40%,
+            
+            rgba(red,0.6) 50%) ; 
+
+         }
+
+         &:hover .card-info--squad {
+            background-image: linear-gradient(105deg, 
+            rgba($color-black, .8) 0%,
+            rgba($color-black, .8) 40%,
+            
+            rgba(green,0.6) 50%) ; 
+
+         }
+
+
+
+
+
+         &:first-child {
+            background-color: rgba(blue,0.2);
+            transition: all 0.3s;
+            backface-visibility: hidden;
+
+
+
+            &:hover {
+                background-color: rgba(blue,0.4);
+                transform: rotate(1deg);
+
+
+            }
+
+         }
+         &:nth-child(2) {
+            background-color: rgba(red,0.2);
+            transition: all 0.3s;
+            backface-visibility: hidden;
+
+
+            &:hover {
+                background-color: rgba(red,0.4);
+                transform: rotate(-1deg);
+
+            }
+
+
+         }
+         &:last-child {
+
+            background-color: rgba(green,0.2);
+            transition: all 0.3s;
+            backface-visibility: hidden;
+
+
+            &:hover {
+                background-color: rgba(green,0.4);
+                transform: rotate(1deg);
+
+            }
+
+
+         }
+
+
+         
+         .card-info{
+           
+            display: flex;
+            justify-content: space-around;
+            background-image: linear-gradient(105deg, 
+            rgba($color-black, .8) 0%,
+            rgba($color-black, .8) 70%,
+            rgba(blue,0.6) 50%) ; 
+
+            transition: all 1s;
+
+            @include respond (tab-port) {
+                background-image: linear-gradient(105deg, 
+                rgba($color-black, .8) 0%,
+                rgba($color-black, .8) 60%,
+                rgba(blue,0.6) 50%) ; 
+    
+            }
+            @include respond (phone) {
+                background-image: linear-gradient(105deg, 
+                rgba($color-black, .8) 0%,
+                rgba($color-black, .8) 40%,
+                rgba(blue,0.6) 50%) ; 
+    
+            }
+          
+
+
+
+            &--duo {
+                background-image: linear-gradient(105deg, 
+                rgba($color-black, .8) 0%,
+                rgba($color-black, .8) 70%,
+                
+                rgba(red,0.6) 50%) ; 
+                @include respond (tab-port) {
+                    background-image: linear-gradient(105deg, 
+                    rgba($color-black, .8) 0%,
+                    rgba($color-black, .8) 60%,
+                    rgba(red,0.6) 50%) ; 
+        
+                }
+                @include respond (phone) {
+                    background-image: linear-gradient(105deg, 
+                    rgba($color-black, .8) 0%,
+                    rgba($color-black, .8) 40%,
+                    rgba(red,0.6) 50%) ; 
+        
+                }
+
+    
+            }
+            &--squad {
+                background-image: linear-gradient(105deg, 
+                rgba($color-black, .8) 0%,
+                rgba($color-black, .8) 70%,
+                
+                rgba(green,0.6) 50%) ; 
+                @include respond (tab-port) {
+                    background-image: linear-gradient(105deg, 
+                    rgba($color-black, .8) 0%,
+                    rgba($color-black, .8) 60%,
+                    rgba(green,0.6) 50%) ; 
+        
+                }
+                @include respond (phone) {
+                    background-image: linear-gradient(105deg, 
+                    rgba($color-black, .8) 0%,
+                    rgba($color-black, .8) 40%,
+                    rgba(green,0.6) 50%) ; 
+        
+                }
+
+    
+            }
+             
+
+            .mode-name {
+                position: relative;
+                left: -6.5rem;
+
+                @include respond(tab-land) {
+                    left: -5.5rem;
+                }
+                @include respond(tab-port) {
+                    left: -3.5rem;
+                }
+                @include respond(phone) {
+                    left: -1.5rem;
+                }
+
+
+
+                       
+            }
+            .matches-played {
+                position: relative;
+                right: -6.5rem;
+             @include respond(tab-land) {
+                    right: -5.5rem;
+                }
+                @include respond(tab-port) {
+                    right: -4rem;
+                }
+                @include respond(phone) {
+                    right: -1.5rem;
+                }
+
+
+              
+
+            }
+            
+         }
+         .card-body {
+             & > * {
+             margin-top: 3rem;
+             display: flex;
+             justify-content: center;
+            }
+             
+        }
+
+
+
+     }
+ }

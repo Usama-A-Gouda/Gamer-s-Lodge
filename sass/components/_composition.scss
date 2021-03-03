@@ -1,0 +1,35 @@
+.game-infromation {
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap; 
+    justify-content: center;
+    text-align: center;    
+
+
+
+}    
+.game-infromation--div2 p {
+    font-size: 2.4rem !important;
+}
+.game-infromation--div2 a {
+    font-size: 1.8rem !important;
+}
+
+.game-caption {
+    
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+
+
+    
+    &:hover {
+        transform: scale(1.02);
+        letter-spacing: 1.3px;
+    }
+       
+
+
+}
+

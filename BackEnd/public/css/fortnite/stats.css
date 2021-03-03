@@ -1,0 +1,60 @@
+body {
+    /* font-family: 'Poppins', sans-serif; */
+    background-image: url(https://i.redd.it/ab94i3q4agk21.jpg);
+
+}
+/* .main__content {
+    width:70%;
+    margin:200px  auto;
+  
+} */
+/* .general {
+    
+    margin: 0 auto;
+    
+    width:70%;
+    background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQHslDtBuf2IOu5sKwa-ShHFceHG0meMk0nFmjMDnf6RWR7Giou);
+    text-align: center;
+} */
+.main {
+    
+    box-shadow: 2px ;
+    text-align: center;
+    margin-top:90px;
+}
+span {
+    font-family: 'Acme', sans-serif;
+    margin-left:5px;
+    color:white;
+
+ }   
+
+ hr {
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+ }
+ /* .life-time__stats {
+     display: flex;
+     
+     justify-content: space-between;
+ } */
+.second,.first,.third{
+    display: flex;
+     flex-wrap: nowrap;
+    justify-content: center;
+}
+.edit {
+    padding-left: 15px;
+}
+.score {
+    float: right;
+    color : red;
+}
+.new {
+   padding-left: 70px;
+   
+}
+.kd {
+    font-size: 30px;
+}

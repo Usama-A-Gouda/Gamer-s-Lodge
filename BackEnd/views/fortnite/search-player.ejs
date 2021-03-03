@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortnite Lodge</title>
+    <!-- using semantic ui -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.3/dist/semantic.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.3/dist/semantic.min.js"></script>
+    <link rel="stylesheet" href="/css/fortnite/form.css">
+    -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/icon.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/statistic.min.css" integrity="sha512-7IFX/ZtMoeSQGjq0O3+9Ku9p3FgOZhHHf1NpbCO9O3hOlNxEb3Wjj8CoqHoDqq/X2pvGryE7aGVvI9+pb2cg7g==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../../../css/style.css" type="text/css" > 
+
+
+
+</head>
+
+<body>
+
+    <div class="container container--fortnite">
+        <div class="game-area">
+            <div class='game-area__header'>
+                <img class="game-area__image" 
+                    src="https://seeklogo.net/wp-content/uploads/2018/10/fortnite-logo.png">
+                <h2 class="game-area__name game-area__name--fortnite u-margin-top-minus heading-secondry heading-secondry--fortnite ">Welcome To Fortnite Lodge .... </h2>
+            </div>        
+
+            
+                <form action="/fortnite/search/stats" method="POST" class="game-area__form game-area__form--fortnite " autocomplete="off">
+
+                        <label>Enter Fortnite Name : </label>
+                        <input type="text" placeholder="Search Now .... " name="playerName">
+                        <!-- <label for="playerName" class="form__label">search now !</label> -->
+                        <div class="form__group">
+                            <div class="form__radio-group">
+                                <input type="radio" class="form__radio-input" name="platform" value="pc" id="pc" checked>
+                                <label for="pc" class="form__radio-label"> <i class="laptop   large icon"></i>PC </label>
+                                <input type="radio" class="form__radio-input" name="platform" value="gamepad" id="gamepad">
+                                <label for="gamepad" class="form__radio-label"><i class="gamepad large icon"></i> gamepad</label>
+                                <input type="radio" class="form__radio-input" name="platform" value="touch" id="touch">
+                                <label for="touch" class="form__radio-label"><i class="tablet  large icon"></i>touch</label>
+
+                            </div>
+
+
+                        </div>
+                        <button class="form__button btn  btn--small u-margin-right-medium" type="submit">Search!</button>
+
+
+                </form> 
+                <a href="/" class="btn  btn--small u-margin-right-medium btn--fixed" >Back To Home .. </a>
+               
+           
+        </div>
+        
+        
+    </div>
+
+
+</body>
+
+</html>
+
+<!-- old code ..  -->
+<!-- 
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Player</title>
+    using semantic ui
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.3/dist/semantic.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.3/dist/semantic.min.js"></script>
+    <link rel="stylesheet" href="/css/fortnite/form.css">
+
+
+</head>
+
+<body>
+
+    <div class="ui container main  ">
+        <img class="ui small circular image" id="im"
+            src="https://seeklogo.net/wp-content/uploads/2018/10/fortnite-logo.png">
+        <h2 class="ui header" id="im">Welcome To Fortnite Corner .... </h2>
+
+
+        <div class="ui huge form  ">
+            <form action="/fortnite/search/stats" method="POST">
+
+                <div class="field center__form">
+                    <label>Enter Fortnite Name : </label>
+                    <input type="text" placeholder="Search Now .... " name="playerName">
+                </div>
+                <button class="ui inverted button" type="submit">Search!</button>
+
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html> 
+-->

@@ -1,0 +1,35 @@
+@import "abstract/functions";
+@import "abstract/mixins";
+@import "abstract/variables";
+
+ 
+@import "base/animations" ;
+@import "base/base" ;
+@import "base/typography" ;
+@import "base/utilites" ;
+
+// @import "components/bg-video";
+@import "components/button";
+@import "components/cards";
+@import "components/composition"; 
+@import "components/form" ;
+// @import "components/feature-box" ; 
+// @import "components/story" ;
+
+@import "layout/header";
+@import "layout/footer"; 
+@import "layout/navigation";
+
+
+
+@import "pages/home";
+@import "pages/fortnite" ;
+@import "pages/fortniteStats";
+@import "pages/pubgStats";  
+@import "pages/soul-purge";
+@import "pages/div2Stats";
+@import "pages/err"
+
+
+
+ 

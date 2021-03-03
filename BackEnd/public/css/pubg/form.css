@@ -1,0 +1,51 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url(https://i.pinimg.com/originals/53/e5/72/53e572275325808983b5096b67930ba4.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    
+}
+
+
+.search {
+width: 70%;
+
+}
+
+.main {
+
+box-shadow: 2px ;
+text-align: center;
+margin-top:100px;
+justify-content: center;
+padding:50px;
+
+}
+
+.head {
+display:inline ;
+}
+
+#im {
+display: inline;
+color:rgb(235, 192, 0);
+font-family: 'Poppins', sans-serif;
+
+}
+.center__form {
+padding:30px;
+text-align: center;
+margin:auto;
+
+}
+#labelColor {
+    color:rgb(235, 192, 0);
+    font-size:15px;
+
+}
+
+.ui.inverted.orange.button {
+    width:30%;
+    font-size: 20px;
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Division2 Lodge</title>
+    <!-- using semantic ui -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.3/dist/semantic.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.3/dist/semantic.min.js"></script>
+    <link rel="stylesheet" href="/css/fortnite/form.css">
+    -->
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/icon.min.css">
+
+
+
+    
+
+    <link rel="stylesheet" href="../../../css/style.css" type="text/css" > 
+
+
+
+</head>
+
+<body>
+
+    <div class="container container--div2">
+        <div class="game-area">
+            <div class='game-area__header'>
+                <img class="game-area__image" 
+                    src="https://cdn1.epicgames.com/epic/offer/TCTD2_Logo_Color-1000x375-6fd59444b232a262056d9bc9b7579cff.png">
+                <h2 class="game-area__name game-area__name--div2 u-margin-top-minus heading-secondry heading-secondry--div2 ">Welcome To Division2 Lodge .... </h2>
+            </div>        
+
+            
+                <form action="/division2/search/stats" method="POST" class="game-area__form game-area__form--div2 " autocomplete="off">
+
+                        <label>Enter Division2 Name : </label>
+                        <input type="text" placeholder="Search Now .... " name="playerName">
+                        <div class="form__group form__group--pubg ">
+                            <div class="form__radio-group">
+                                <input type="radio" class="form__radio-input" name="platform" value="uplay" id="uplay" checked>
+                                <label for="uplay" class="form__radio-label"> <i class="bullseye   large icon"></i>Uplay </label>
+                                <input type="radio" class="form__radio-input" name="platform" value="xbox" id="xbox">
+                                <label for="xbox" class="form__radio-label"><i class="xbox large icon"></i> Xbox</label>
+                                <input type="radio" class="form__radio-input" name="platform" value="psn" id="ps4">
+                                <label for="ps4" class="form__radio-label"><i class="playstation  large icon"></i>PS4</label>
+
+                            </div>
+                        </div>
+                        <button class="form__button btn  btn--small u-margin-right-medium" type="submit">Search!</button>
+
+
+                </form> 
+                <a href="/" class="btn  btn--small u-margin-right-medium btn--fixed" >Back To Home .. </a>
+               
+           
+        </div>
+        
+        
+    </div>
+
+
+</body>
+
+</html>
+
+<!-- old code ..  -->
+<!-- 
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Player</title>
+    using semantic ui
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.3/dist/semantic.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.3/dist/semantic.min.js"></script>
+    <link rel="stylesheet" href="/css/fortnite/form.css">
+
+
+</head>
+
+<body>
+
+    <div class="ui container main  ">
+        <img class="ui small circular image" id="im"
+            src="https://seeklogo.net/wp-content/uploads/2018/10/fortnite-logo.png">
+        <h2 class="ui header" id="im">Welcome To Fortnite Corner .... </h2>
+
+
+        <div class="ui huge form  ">
+            <form action="/fortnite/search/stats" method="POST">
+
+                <div class="field center__form">
+                    <label>Enter Fortnite Name : </label>
+                    <input type="text" placeholder="Search Now .... " name="playerName">
+                </div>
+                <button class="ui inverted button" type="submit">Search!</button>
+
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html> 
+-->

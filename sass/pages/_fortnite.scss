@@ -1,0 +1,456 @@
+.container {
+    
+    border-bottom-left-radius: 15rem;
+    border-top-right-radius: 15rem;
+    background-size: cover;
+    background-position: center;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    text-align: center; 
+    transform: translateX(20%);
+    transition: all 0.4s;
+    height: 100%;   
+    @include respond(tab-port){
+        width: 100%;
+        border-bottom-left-radius: 0rem;
+        border-top-right-radius: 0rem;
+    
+        transform: translateX(0);
+
+    }
+    
+    transition: all 0.4s;
+    &--fortnite{
+        background-image: linear-gradient(105deg, 
+        rgba($color-black, .6) 0%,
+        rgba($color-black, .6) 50%,
+        transparent 50%) ,
+        url(../../img/fort/fortniteBackground.jpg); 
+        font-family: 'Luckiest Guy', cursive; 
+        & > * > * > * {
+            font-family: 'Luckiest Guy', cursive; 
+            
+
+        }
+
+    
+
+    }
+    &--pubg  {
+        font-family: 'Oswald', sans-serif;
+        background-image: linear-gradient(105deg, 
+        rgba($color-black, .6) 0%,
+        rgba($color-black, .6) 50%,
+        transparent 50%) ,
+        url(../../img/pubg/test3.jpg); 
+        & > * {
+            font-weight:700 ;
+            font-size: 3rem;
+    
+        }
+
+        & > * > * > * {
+            font-family: 'Oswald', sans-serif; 
+
+
+        } 
+
+    }
+    &--div2 {
+        font-family: 'Teko', sans-serif;
+        color: $color-white;
+        
+        background-image: linear-gradient(105deg, 
+        rgba($color-black, .6) 0%,
+        rgba($color-black, .6) 50%,
+        transparent 50%) ,
+        url(https://i.redd.it/2yqug0zjqh311.jpg); 
+
+        &:first-child {
+            margin-bottom: 3rem !important;
+        }
+
+        & > * > * > * {
+            font-family: 'Teko', sans-serif;
+
+        }
+
+
+    }
+
+
+
+
+    &:hover {
+        border-bottom-left-radius: 0rem;
+        border-top-right-radius: 0rem;
+        border-bottom-right-radius: 15rem;
+        border-top-left-radius: 15rem;
+        @include respond(tab-port){
+            border-bottom-right-radius: 0rem;
+            border-top-left-radius: 0rem;
+        }
+    
+    }
+
+
+    .game-area {
+
+  
+
+        &__header {
+            display: flex;
+            justify-content: center; 
+            text-align: center;
+            align-items: center;
+            flex-direction: column;
+            padding-bottom: 1rem;
+            text-transform: uppercase;
+          
+    
+        
+            
+            
+            }
+            &__image {
+                width: 60%;
+                transition: all 0.3s;
+                margin-bottom: 1.5rem;
+                &--pubg {
+                    width: 50%;
+                    padding-top:7rem ;
+                    padding-bottom: 3.5rem;
+                    
+                }
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+            &__name {
+                &--fortnite {
+                    width: 100%;
+                    background-image: linear-gradient(to right, rgba(rgb(98, 98, 218), 0.4), rgba(blue , 0.4));
+                    transform: translate(0);
+                    margin: 0 auto;
+
+                    @include respond (small-phone) {
+                        width: 70%;
+                    }
+                    @include respond (small-phone-v2) {
+                        width:100%;
+                        transform: translate(50%);
+                        
+                    }
+
+    
+
+                }
+                &--pubg {
+                    background-image: linear-gradient(to right, rgba($color-primary, 0.4), rgba($color-primary-light, 0.7));
+                    transform: translate(0);
+                    width: initial;
+                    @include respond (phone) {
+                        width: 100%;
+
+                    }
+                    @include respond(small-phone-v2) {
+                        width: 100%;
+                        margin: 0 auto;
+                        transform: translate(50%);
+                    }
+                }
+                &--div2 {
+                    margin-top: 2rem !important;
+                    background-image: linear-gradient(to right, rgba($color-primary, 0.4), rgba($color-black, 0.7)) !important;
+                    transform: translate(0);
+                    width: initial;
+                    @include respond (phone) {
+                        width: 100%;
+
+                    }
+                    @include respond(small-phone-v2) {
+                        width: 100%;
+                        margin: 0 auto;
+                        //transform: translate(50%);
+                    }
+
+                }
+                
+                &:hover {
+                    animation: left-to-right-v2 0.4s; 
+                }
+                
+            }
+            &__form { 
+                display: flex;
+                flex-direction: column; 
+                .form__group {
+    
+                    &--pubg {
+                        color:white !important;
+                    }
+                 
+                    .form__radio-group {
+                        display: flex;
+                        justify-content: space-evenly;
+                        align-items: center;
+                        padding: 3rem;
+                        border-radius: 10%;
+                        transition: all 0.2s; 
+                        box-shadow: 2px 2px 20px rgba($color-white,0.4);
+                        
+                        @include respond(small-phone-v2) {
+                            flex-direction: column;
+                            //justify-content: center;
+                            align-self: center;
+                            margin: 0 auto;
+                            width: 80%;
+                            & > * {
+                            transform: translateX(-8rem) ;
+                        }
+                        }
+    
+                        &:hover {
+                            background-color: rgba(transparent,0.1);
+                        }
+                       
+                        
+                     }
+
+                     
+                     .form__radio-input {
+                        width: 2rem;
+                        height: 2rem;
+                        transition:  all 0.4s;
+
+                    }
+
+                    .form__radio-label {
+                        font-size: 2rem;
+                        margin-left: -3rem;
+                        align-self: center;
+                        text-align: center;
+                        padding-bottom: .5rem;
+                        border-bottom: 3px solid $color-white;
+                        border-radius: 1rem;
+                        @include respond (small-phone-v2) {
+                            font-size: 1.5rem;
+                            margin-left: -3rem;
+                            margin-bottom: 0rem;
+                            margin-top: 1rem;
+                            align-self: center;
+                            text-align: center;
+                            padding-bottom: .5rem;
+                            transform: translate(4rem,-2rem);
+                            
+                            
+    
+                        }
+                        i {
+                            padding-left: 2rem;
+                            padding-right:5rem ;
+                        }
+
+                    }
+                }
+                & > * {
+                display: block;
+                margin: 10px;
+                padding: 10px;
+                margin-bottom: 2rem;
+
+
+                
+                }
+                &--pubg , &--div2 {
+                    padding-top: 5rem;
+                    width: 70%;
+                    margin: 0 auto;
+                    @include respond(small-phone) {
+                        width: 100%;
+                    }
+                    
+                }
+                &--div2 {
+                    & > label {
+                        text-shadow: 0rem 0rem 1rem $color-black !important;
+                        
+                    }
+                    & > * {
+                        font-size: 2rem !important;
+                        
+                    }
+                }
+                
+                &> input {
+                    text-align: center;
+                    border: none; 
+                    margin-bottom: 4rem;
+                    padding: 1.5rem;
+                    width: 100%;
+                    @include respond (small-phone) {
+                        width: 70%;
+                        margin: 0 auto;
+                    }
+    
+
+                    border-left:$color-red 4px solid;
+                    transition: all .2s;
+
+                   &:placeholder-shown + .form__label {
+                        padding: 0;
+                        opacity: 0;
+                        visibility: hidden;
+                        transform: translateY(-1rem);
+                                                    }
+                    
+                    }
+            
+                &> input:focus  {
+                    outline: none;
+                    box-shadow: 0 1rem 2rem rgba($color-black, .1);
+                    border-bottom: 3px solid $color-black;
+                    border-left: none;
+                    transform: scale(1.1);
+                    border-radius: 2rem;
+        
+
+                }
+                & > label {
+                    font-size: 1.5rem;
+                    font-weight: 900;
+                    color: wheat;
+                    margin-left: 2rem;
+                    margin-top: .7rem;
+                    display: block;
+                    transition: all .3s;
+                    &:hover {
+                        transform: scale(1.2);
+                    }
+            
+
+                }
+                &>button {
+                    margin-bottom: 10rem;
+                    width: 100%;
+                    padding: 2rem;
+                    @include respond (small-phone) {
+                        width: 80%;
+                        align-self: center;
+                        margin-left: 3rem;
+                    }
+
+                    @include respond (small-phone-v2) {
+                        width: 80%;
+                        align-self: center;
+                        margin-left: 3rem;
+                    }
+
+                } 
+
+               
+                
+            
+            }
+         
+            
+
+    }
+  
+
+    }    
+.search-again {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+    @include respond(tab-port) {
+        width: 90%;
+    }
+    @include respond(phone) {
+        width: 100rem;
+    }
+    @include respond(small-phone) {
+        width: 100rem;
+        margin-left: 10rem;
+    }
+  
+
+
+
+    &--div2 {
+       margin: 0 auto;
+       font-family: 'Teko', sans-serif !important;
+       & > * {
+       @include respond (small-phone-v2) {
+       
+
+        width: 80% !important;   
+    }
+ 
+    }
+   
+    }
+    & > * {
+        margin-top: 3rem;
+        width: 50%;
+        padding: 3rem;
+        outline: none ;
+        text-align: center;
+        border-radius: 3rem;
+        background-color: rgba($color-white,0.7) ;
+        transition: all 0.5s;
+        &:last-child {
+            background-color: rgba($color-white,0) ;
+            padding: 3rem;
+            padding: 3rem;
+            border-radius: 10%;
+            box-shadow: 2px 2px 20px rgba($color-white,0.4);
+            & > * > *{
+                padding-left: .5rem;
+
+                padding-right: 3rem;
+            }
+
+        }
+    
+        &:focus {
+            background-color: rgba($color-white,1) ;
+
+        }
+    }
+    
+   
+}
+
+    /*.search {
+    width: 70%;
+
+    }
+
+    .main {
+
+    box-shadow: 2px ;
+    text-align: center;
+    margin-top:90px;
+    justify-content: center;
+    padding:10px;
+    }
+
+    .head {
+    display:inline ;
+    }
+    #im {
+    display: inline;
+
+    }
+    .center__form {
+
+    text-align: center;
+    margin:auto;
+
+    }*/

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Player</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/icon.min.css">
+
+    <link rel="stylesheet" href="../../../css/style.css" type="text/css" > 
+
+
+
+
+</head>
+
+<body>
+    <div class="container container--pubg">
+        <div class="game-area">
+            <div class='game-area__header'>
+                <img class="game-area__image game-area__image--pubg" 
+                    src="https://pngimg.com/uploads/pubg/pubg_PNG33.png">
+                <h2 class="game-area__name game-area__name--pubg heading-secondry heading-secondry--pubg ">Welcome To Pubg Lodge .... </h2>
+            </div>         
+
+            
+                <form action="/pubg/search/stats" method="POST" class="game-area__form game-area__form--pubg" autocomplete="off">
+
+                        <label>Enter Pubg Name : </label>
+                        <input type="text" placeholder="Search Now .... " name="playerName">
+
+                        <div class="form__group form__group--pubg ">
+                            <div class="form__radio-group">
+                                <input type="radio" class="form__radio-input" name="platform" value="pc" id="pc" checked>
+                                <label for="pc" class="form__radio-label"> <i class="laptop   large icon"></i>PC </label>
+                                <input type="radio" class="form__radio-input" name="platform" value="xbox" id="xbox">
+                                <label for="xbox" class="form__radio-label"><i class="xbox large icon"></i> Xbox</label>
+                                <input type="radio" class="form__radio-input" name="platform" value="psn" id="ps4">
+                                <label for="ps4" class="form__radio-label"><i class="playstation  large icon"></i>PS4</label>
+
+                            </div>
+                        </div>
+
+                
+                        <button class="form__button btn btn--yellow btn--small u-margin-right-medium" type="submit">Search!</button>
+
+
+                </form> 
+                <a href="/" class="btn  btn--small u-margin-right-medium btn--fixed" >Back To Home .. </a>
+               
+           
+        </div>
+        
+        
+    </div>
+
+</body>
+
+</html>

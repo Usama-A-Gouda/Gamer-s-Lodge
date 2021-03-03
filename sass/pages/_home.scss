@@ -1,0 +1,135 @@
+.section-game {
+
+   // background-color: $color-gray-light-1;
+    padding:30rem 0 ;
+    backface-visibility: hidden;
+    margin-top: -20vh;
+    text-align: center;
+    opacity: 0;
+    display: none;    
+    top: 1%;
+    z-index: 0; 
+    color: $color-white;
+    @include respond (tab-port) {
+        
+        width: 100%;
+        background-position: center;
+     
+        
+     }
+
+    &--soul-purge ,&--fortnite,&--pubg,&--lol {
+        background-size: cover;  
+        padding: 30rem 0 10rem 0; 
+        text-align: center;
+        text-transform: uppercase;
+        .game-caption {
+            text-shadow:2px 0px 10px black;
+
+        }
+
+        @include respond (tab-port) {
+            padding: 20rem 3rem 10rem 3rem; 
+                    
+         }
+    
+    }
+    &--fortnite,&--pubg,&--lol {
+        margin-top: 2rem;
+        @include respond (tab-port) {
+            margin-top:.5rem !important ; 
+            
+         }
+    
+    }
+
+    &--soul-purge {
+        font-family: 'Cinzel', serif;
+        font-weight: 900; 
+        background-image:url(/img/soulpurge/soulpurgeBackground.png) ;
+        border-bottom-right-radius: 20rem;
+      
+  
+
+    }
+    &--fortnite {
+       
+        background-image: url(/img/fort/fortniteBackground.jpg);
+        font-family: 'Luckiest Guy', cursive; 
+        border-bottom-left-radius: 20rem;
+        border-top-right-radius: 20rem;
+        margin-top: 2rem;
+
+  
+    } 
+    &--pubg {
+        font-family: 'Oswald', sans-serif; 
+        font-weight: 1000;
+        color:$color-white;
+      
+        background-image:  url(/img/pubg/test3.jpg);
+        border-bottom-right-radius: 20rem;
+        border-top-left-radius: 20rem;
+
+    }
+
+    &--lol {
+        font-family: 'Teko', sans-serif;
+        background-image: url(https://images.hdqwalls.com/wallpapers/tom-clancys-the-division-game.jpg);
+        background-position: center;
+        //position: relative;
+        //top: 4rem;
+        color:$color-white;
+        //margin: -2rem 0 5rem 0 ;
+
+        margin-bottom: 5rem;
+
+        border-top-right-radius: 20rem;
+        border-bottom-left-radius: 20rem;
+        @include respond (tab-port) {
+            margin-bottom: 1.5rem;
+
+            
+         }
+
+        
+        .game-caption {
+            font-size:1.5rem ;
+            font-weight: 800;
+            text-shadow:2px 0px 10px black;
+
+        }
+
+
+        
+
+
+    }
+    .btn-group {
+       
+        @include respond (small-phone) {
+            display: flex;
+            flex-direction: column;
+           
+            align-items: center;
+            margin: 1rem;
+           
+            
+          
+            
+        }
+       
+        
+            @include respond (small-phone) { 
+                &>.btn {
+                    width: 80%;
+                }
+                & > .btn:first-child {
+                margin: 1rem ;  
+                margin-left: 0;
+            } 
+    
+        }
+    }
+
+}

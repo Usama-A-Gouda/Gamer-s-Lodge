@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- using semantic ui -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.3/dist/semantic.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.3/dist/semantic.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&display=swap" rel="stylesheet">
+
+  <!-- <link rel="stylesheet" href="/css/fortnite/stats.css"> -->
+  <!-- <link rel="stylesheet" href="css/style.css" type="text/css" > -->
+  <link rel="stylesheet" href="../../../css/style.css" type="text/css">
+
+
+
+
+  <title>Player infromation </title>
+</head>
+
+<body class="fortnite">
+
+  <div class="game-states">
+
+                  <form action="/fortnite/search/stats" method="POST" class="game-area__form game-area__form--fortnite search-again  " autocomplete="off">
+
+                        <input type="text" placeholder="Search Now .... " name="playerName">
+                        <div class="form__group">
+                          <div class="form__radio-group">
+                              <input type="radio" class="form__radio-input" name="platform" value="pc" id="pc" checked>
+                              <label for="pc" class="form__radio-label"> <i class="laptop   large icon"></i>PC </label>
+                              <input type="radio" class="form__radio-input" name="platform" value="gamepad" id="gamepad">
+                              <label for="gamepad" class="form__radio-label"><i class="gamepad large icon"></i> gamepad</label>
+                              <input type="radio" class="form__radio-input" name="platform" value="touch" id="touch">
+                              <label for="touch" class="form__radio-label"><i class="tablet  large icon"></i>touch</label>
+
+                          </div>
+                        </div>
+
+                        <!-- <button class="form__button btn  btn--small u-margin-right-medium" type="submit">Search!</button> -->
+                        
+
+                </form> 
+ 
+
+    <!-- header of page -->
+    <div class="game-states__header">
+      <div class="header__player-name">Player Name : <span><%= playerData.epicUserHandle %> </span></div>
+      <div class="header__platform">Platform : <span><%= playerData.platformName %> </span></div>
+      <hr>
+    </div>
+
+    <!-- life time states -->
+    <div class="life-time-states">
+      <div class="states-name">
+        .. Life Time States ..
+      </div>
+      <div class="ui inverted statistics">
+        <% for(var i=11 ; i>7 ; i--) { %>
+        <div class="statistic">
+
+          <div class="value">
+            <%= playerData.lifeTimeStats[i].value %>
+          </div>
+          <div class="label"><%= playerData.lifeTimeStats[i].key %> </div>
+
+        </div>
+
+        <% } %>
+
+      </div>
+
+      <div class="ui inverted statistics">
+        <% for(var i=7 ; i>5 ; i--) { %>
+        <div class="statistic">
+
+          <div class="value">
+            <%= playerData.lifeTimeStats[i].value %>
+          </div>
+          <div class="label"><%= playerData.lifeTimeStats[i].key %> </div>
+
+        </div>
+
+        <% } %>
+
+      </div>
+      <div class="ui inverted statistics">
+        <% for(var i=5 ; i>0 ; i--) { %>
+        <div class="statistic">
+
+          <div class="value">
+            <%= playerData.lifeTimeStats[i].value %>
+          </div>
+          <div class="label"><%= playerData.lifeTimeStats[i].key %> </div>
+
+        </div>
+
+        <% } %>
+
+      </div>
+    </div>
+
+
+  </div>
+
+  <!-- Solo Due Squad states-->
+  <div class="player-states">
+    <!--solo-->
+    <div class="mode-states">
+      <div class="card-info" >
+        <div class="mode-name">
+          solo
+        </div>
+         <div class="matches-played">
+          <%= playerData.stats.p2.matches.displayValue %> Matches
+
+         </div>
+
+         </div>
+      <div class="card-body">
+
+          <div class="ui inverted statistics">
+
+            <div class="statistic">
+  
+              <div class="value">
+                <%= playerData.stats.p2.top1.displayValue %>
+              </div>
+             
+              <div class="label"><%= playerData.stats.p2.top1.label %> </div>
+              <hr>
+              
+  
+            </div>
+            <div class="statistic">
+  
+              <div class="value">
+                <%= playerData.stats.p2.winRatio.displayValue %>
+               
+              </div>
+              <div class="label"><%= playerData.stats.p2.winRatio.label %> </div>
+              
+              <hr>
+            </div>
+            
+           </div>
+           
+           <div class="ui inverted statistics">
+
+           <div class="statistic">
+  
+            <div class="value">
+              <%= playerData.stats.p2.kills.displayValue %>
+            </div>
+            <div class="label"><%= playerData.stats.p2.kills.label %> </div>
+            <hr>
+           </div>
+           <div class="statistic">
+  
+            <div class="value">
+              <%= playerData.stats.p2.kd.displayValue %>
+            </div>
+            <div class="label"><%= playerData.stats.p2.kd.label %> </div>
+            <hr>
+           </div>
+        
+
+          </div>
+          <div class="ui inverted statistics">
+
+            <div class="statistic">
+   
+             <div class="value">
+               <%= playerData.stats.p2.kpg.displayValue %>
+             </div>
+             <div class="label"><%= playerData.stats.p2.kpg.label %> </div>
+             <hr>
+            </div>
+            <div class="statistic">
+   
+             <div class="value">
+               <%= playerData.stats.p2.kpm.displayValue %>
+             </div>
+             <div class="label"><%= playerData.stats.p2.kpm.label %> </div>
+             <hr>
+            </div>
+         
+ 
+           </div>
+           <div class="ui inverted statistics">
+
+            <div class="statistic">
+   
+             <div class="value">
+               <%= playerData.stats.p2.score.displayValue %>
+             </div>
+             <div class="label"><%= playerData.stats.p2.score.label %> </div>
+             <hr>
+             
+            </div>
+   
+           
+         
+ 
+           </div>
+           <div class="ui inverted statistics">
+
+  
+            <div class="statistic">
+   
+              <div class="value">
+                <%= playerData.stats.p2.trnRating.displayValue %>
+              </div>
+              <div class="label"><%= playerData.stats.p2.trnRating.label %> </div>
+              <hr>
+            </div>
+            
+           
+         
+ 
+           </div>
+           <br>
+
+
+           
+
+           
+         </div>
+         
+
+         
+      
+     
+    </div>
+    <!-- end of solo-->
+    
+    <!--duo -->
+    <div class="mode-states">
+      <div class="card-info card-info--duo">
+        <div class="mode-name">
+          duo
+        </div>
+         <div class="matches-played">
+           <%= playerData.stats.p10.matches.displayValue %> Matches
+           
+         </div>
+
+         </div>
+      <div class="card-body">
+
+          <div class="ui inverted statistics">
+
+            <div class="statistic">
+  
+              <div class="value">
+                <%= playerData.stats.p10.top1.displayValue %>
+              </div>
+             
+              <div class="label"><%= playerData.stats.p10.top1.label %> </div>
+              <hr>
+              
+  
+            </div>
+            <div class="statistic">
+  
+              <div class="value">
+                <%= playerData.stats.p10.winRatio.displayValue %>
+               
+              </div>
+              <div class="label"><%= playerData.stats.p10.winRatio.label %> </div>
+              
+              <hr>
+            </div>
+            
+           </div>
+           
+           <div class="ui inverted statistics">
+
+           <div class="statistic">
+  
+            <div class="value">
+              <%= playerData.stats.p10.kills.displayValue %>
+            </div>
+            <div class="label"><%= playerData.stats.p10.kills.label %> </div>
+            <hr>
+           </div>
+           <div class="statistic">
+  
+            <div class="value">
+              <%= playerData.stats.p10.kd.displayValue %>
+            </div>
+            <div class="label"><%= playerData.stats.p10.kd.label %> </div>
+            <hr>
+           </div>
+        
+
+          </div>
+          <div class="ui inverted statistics">
+
+            <div class="statistic">
+   
+             <div class="value">
+               <%= playerData.stats.p10.kpg.displayValue %>
+             </div>
+             <div class="label"><%= playerData.stats.p10.kpg.label %> </div>
+             <hr>
+            </div>
+            <div class="statistic">
+   
+             <div class="value">
+               <%= playerData.stats.p10.kpm.displayValue %>
+             </div>
+             <div class="label"><%= playerData.stats.p10.kpm.label %> </div>
+             <hr>
+            </div>
+         
+ 
+           </div>
+           <div class="ui inverted statistics">
+
+            <div class="statistic">
+   
+             <div class="value">
+               <%= playerData.stats.p10.score.displayValue %>
+             </div>
+             <div class="label"><%= playerData.stats.p10.score.label %> </div>
+             <hr>
+            
+             
+            </div>
+ 
+           </div>
+           <div class="ui inverted statistics">
+
+  
+            <div class="statistic">
+   
+              <div class="value">
+                <%= playerData.stats.p10.trnRating.displayValue %>
+              </div>
+              <div class="label"><%= playerData.stats.p10.trnRating.label %> </div>
+              <hr>
+            </div>
+
+ 
+           </div>
+
+
+           
+
+           
+         </div>
+         
+
+         
+      
+    
+    </div>
+    <!-- end of duo -->
+
+    <!--squad-->
+    <div class="mode-states">
+      <div class="card-info card-info--squad">
+        <div class="mode-name">
+          Squad
+        </div>
+         <div class="matches-played">
+           <%= playerData.stats.p9.matches.displayValue %> Matches
+           
+         </div>
+
+         </div>
+      <div class="card-body">
+
+          <div class="ui inverted statistics">
+
+            <div class="statistic">
+  
+              <div class="value">
+                <%= playerData.stats.p9.top1.displayValue %>
+              </div>
+             
+              <div class="label"><%= playerData.stats.p9.top1.label %> </div>
+              <hr>
+              
+  
+            </div>
+            <div class="statistic">
+  
+              <div class="value">
+                <%= playerData.stats.p9.winRatio.displayValue %>
+               
+              </div>
+              <div class="label"><%= playerData.stats.p9.winRatio.label %> </div>
+              
+              <hr>
+            </div>
+            
+           </div>
+           
+           <div class="ui inverted statistics">
+
+           <div class="statistic">
+  
+            <div class="value">
+              <%= playerData.stats.p9.kills.displayValue %>
+            </div>
+            <div class="label"><%= playerData.stats.p9.kills.label %> </div>
+            <hr>
+           </div>
+           <div class="statistic">
+  
+            <div class="value">
+              <%= playerData.stats.p9.kd.displayValue %>
+            </div>
+            <div class="label"><%= playerData.stats.p9.kd.label %> </div>
+            <hr>
+           </div>
+        
+
+          </div>
+          <div class="ui inverted statistics">
+
+            <div class="statistic">
+   
+             <div class="value">
+               <%= playerData.stats.p9.kpg.displayValue %>
+             </div>
+             <div class="label"><%= playerData.stats.p9.kpg.label %> </div>
+             <hr>
+            </div>
+            <div class="statistic">
+   
+             <div class="value">
+               <%= playerData.stats.p9.kpm.displayValue %>
+             </div>
+             <div class="label"><%= playerData.stats.p9.kpm.label %> </div>
+             <hr>
+            </div>
+         
+ 
+           </div>
+           <div class="ui inverted statistics">
+
+            <div class="statistic">
+   
+             <div class="value">
+               <%= playerData.stats.p9.score.displayValue %>
+             </div>
+             <div class="label"><%= playerData.stats.p9.score.label %> </div>
+             <hr>
+            
+             
+            </div>
+ 
+           </div>
+           <div class="ui inverted statistics">
+
+  
+            <div class="statistic">
+   
+              <div class="value">
+                <%= playerData.stats.p9.trnRating.displayValue %>
+              </div>
+              <div class="label"><%= playerData.stats.p9.trnRating.label %> </div>
+              <hr>
+            </div>
+
+ 
+           </div>
+
+
+           
+
+           
+         </div>
+         
+
+         
+      
+    
+    </div>
+
+    </div>
+    <!-- end of squad -->
+  </div>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
+
+
+<!-- 
+
+
+
+
+
+
+ 
+         
+
+            
+            
+            
+    
